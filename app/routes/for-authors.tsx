@@ -1,3 +1,4 @@
+import { HomePublishStepsSection } from "../components/home/home-publish-steps-section";
 import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/for-authors";
@@ -58,6 +59,7 @@ export default function ForAuthors() {
           </div>
         </section>
       </div>
+      <HomePublishStepsSection />
     </SiteLayout>
   );
 }
