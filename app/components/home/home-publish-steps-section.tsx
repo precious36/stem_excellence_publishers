@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 const publishSteps = [
   {
     title: "Step 1 - Prepare",
@@ -25,26 +23,20 @@ const publishSteps = [
 
 export function HomePublishStepsSection() {
   return (
-    <section className="section">
+    <section className="publish-journey-section">
       <div className="site-container">
-        <div className="section-title split">
+        <div className="publish-journey-header">
           <h2>Publish with us</h2>
           <p>A simple path for authors.</p>
         </div>
 
-        <div className="grid-2">
+        <div className="publish-journey-grid">
           {publishSteps.map((step) => (
-            <article key={step.title} className="content-card">
-              <strong className="card-title">{step.title}</strong>
+            <article key={step.title} className="publish-journey-card">
+              <strong className="publish-journey-title">{step.title}</strong>
               <p>{step.description}</p>
             </article>
           ))}
-        </div>
-
-        <div className="action-row">
-          <Link className="ref-btn ref-btn-primary" to="/for-authors">
-            Go to author guidelines
-          </Link>
         </div>
       </div>
     </section>
