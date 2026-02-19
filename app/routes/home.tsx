@@ -2,6 +2,8 @@ import { HomeFeaturedBooksSection } from "../components/home/home-featured-books
 import { HomeFocusAreasSection } from "../components/home/home-focus-areas-section";
 import { HomeFoundersSection } from "../components/home/home-founders-section";
 import { HomeHeroSection } from "../components/home/home-hero-section";
+import { HomeHighlightsSection } from "../components/home/home-highlights-section";
+import { HomeFocusPillarsSection } from "../components/home/home-focus-pillars-section";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/home";
 
@@ -21,6 +23,8 @@ export default function Home() {
     <SiteLayout footerMode="full">
       <HomeHeroSection />
       <HomeFocusAreasSection />
+      <HomeHighlightsSection />
+      <HomeFocusPillarsSection />
       <HomeFeaturedBooksSection />
       <HomeFoundersSection />
     </SiteLayout>
