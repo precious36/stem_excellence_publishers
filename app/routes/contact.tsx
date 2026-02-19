@@ -49,7 +49,7 @@ export default function Contact() {
               </p>
               <div className="tagrow">
                 <span className="tag">Response time</span>
-                <span className="tag">Guidelines</span>
+                <span className="tag">Support</span>
               </div>
             </article>
 
