@@ -18,6 +18,9 @@ export function HomeHeroSection() {
           <Link className="ref-btn ref-btn-primary" to="/for-authors">
             Submit a Manuscript
           </Link>
+          <Link className="ref-btn ref-btn-ghost" to="/about">
+            Read More
+          </Link>
         </div>
       </div>
     </section>
