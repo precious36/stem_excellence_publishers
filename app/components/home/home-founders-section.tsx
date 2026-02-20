@@ -3,13 +3,11 @@ import { Link } from "react-router";
 const founders = [
   {
     name: "Blessings G. Malimusi",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80",
+    role: "Co-Founder",
   },
   {
-    name: "Trust Chifunga",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80",
+    name: "Trust P. Chifunga",
+    role: "Co-Founder",
   },
 ];
 
@@ -19,27 +17,43 @@ export function HomeFoundersSection() {
       <div className="site-container">
         <div className="home-founders-grid">
           <div className="home-founders-list">
-            <h2>Meet the Founders</h2>
+            <h2>About the Founders</h2>
+            <p className="home-founders-intro">
+              STEM Excellence Publishers was founded by Blessings G. Malimusi and Trust P.
+              Chifunga to reduce barriers to quality STEM education through practical and accessible
+              publishing.
+            </p>
             <ul>
               {founders.map((founder) => (
-                <li key={founder.name}>{founder.name}</li>
+                <li key={founder.name}>
+                  {founder.name}
+                  <span>{founder.role}</span>
+                </li>
               ))}
             </ul>
           </div>
 
           <div className="home-founder-images">
             {founders.map((founder) => (
-              <figure key={founder.name} className="home-founder-card">
-                <img src={founder.image} alt={founder.name} className="founder-image" />
-              </figure>
+              <article key={founder.name} className="home-founder-card home-founder-card-text">
+                <p className="modern-kicker">{founder.role}</p>
+                <h3>{founder.name}</h3>
+                <p>
+                  Detailed founder profiles will be added from the back-cover biographies of our
+                  published titles.
+                </p>
+              </article>
             ))}
           </div>
 
           <aside className="home-publish-panel">
-            <h2>Publish With Us</h2>
-            <p>Share Your Research with the World</p>
-            <Link to="/for-authors" className="ref-btn ref-btn-secondary">
-              Get Started
+            <h2>Partner With Us</h2>
+            <p>
+              We collaborate with schools, universities, NGOs, and STEM programmes on sponsored
+              titles, outreach distribution, and STEM reading initiatives.
+            </p>
+            <Link to="/contact" className="ref-btn ref-btn-secondary">
+              Start a partnership
             </Link>
           </aside>
         </div>
