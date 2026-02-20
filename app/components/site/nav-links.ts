@@ -10,6 +10,6 @@ export const siteNavLinks: SiteNavLink[] = [
   { to: "/books", label: "Books" },
   { to: "/for-authors", label: "For Authors" },
   { to: "/services", label: "Services" },
-  { to: "/blog", label: "Blog" },
+  { to: "/blog", label: "FAQs" },
   { to: "/contact", label: "Contact" },
 ];
