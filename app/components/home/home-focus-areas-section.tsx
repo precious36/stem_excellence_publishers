@@ -1,17 +1,17 @@
 const focusAreas = [
   {
-    title: "Engineering & Technology",
-    subtitle: "Innovative Resources",
+    title: "Students and Self-Learners",
+    subtitle: "Clear STEM explanations for independent learning",
     icon: <GearIcon />,
   },
   {
-    title: "Math & Computing",
-    subtitle: "Cutting-Edge Content",
+    title: "Teachers and Lecturers",
+    subtitle: "Structured resources for classroom and program delivery",
     icon: <CalculatorIcon />,
   },
   {
-    title: "Science & Outreach",
-    subtitle: "Inspiring Learning",
+    title: "Researchers and STEM Programmes",
+    subtitle: "Publishing support for outreach and capacity building",
     icon: <RocketIcon />,
   },
 ];
