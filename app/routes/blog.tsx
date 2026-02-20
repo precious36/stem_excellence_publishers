@@ -2,6 +2,29 @@ import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/blog";
 
+const updateStreams = [
+  {
+    title: "Editorial Notices",
+    detail: "Policy updates, submission windows, and decisions affecting authors and partners.",
+  },
+  {
+    title: "Calls for Manuscripts",
+    detail: "Focused calls by discipline, level, and publication timeline.",
+  },
+  {
+    title: "Release Announcements",
+    detail: "New title launches, catalogue additions, and featured teaching resources.",
+  },
+];
+
+const focusTopics = [
+  "Mathematics education",
+  "Engineering learning resources",
+  "Computing and data literacy",
+  "Open educational publishing",
+  "STEM curriculum development",
+];
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Blog | STEM Excellence Publishers" },
@@ -15,33 +38,44 @@ export function meta({}: Route.MetaArgs) {
 export default function Blog() {
   return (
     <SiteLayout compactFooterLinks={[{ to: "/for-authors", label: "Submit" }]}>
-      <div className="site-container">
+      <div className="site-container modern-page">
         <PageIntro
           breadcrumb="Home / Blog"
-          title="Blog"
-          lead="Announcements, calls for chapters, new releases, and updates."
+          title="Editorial Updates"
+          lead="This section publishes official announcements, calls for manuscripts, and release updates."
         />
 
-        <section className="section">
-          <div className="grid-2">
-            <article className="content-card">
-              <strong className="card-title">Post title (placeholder)</strong>
-              <p>Short excerpt. Add a simple post system later, or keep this as static pages.</p>
-              <div className="tagrow">
-                <span className="tag">Announcement</span>
-                <span className="tag">2026</span>
-              </div>
+        <section className="modern-grid three">
+          {updateStreams.map((stream) => (
+            <article key={stream.title} className="modern-card">
+              <h2>{stream.title}</h2>
+              <p>{stream.detail}</p>
             </article>
+          ))}
+        </section>
 
-            <article className="content-card">
-              <strong className="card-title">Call for submissions (placeholder)</strong>
-              <p>Short excerpt. Replace with real dates and categories when ready.</p>
-              <div className="tagrow">
-                <span className="tag">Call</span>
-                <span className="tag">Books</span>
-              </div>
-            </article>
-          </div>
+        <section className="modern-grid two modern-section">
+          <article className="modern-card">
+            <h2>Topics We Cover</h2>
+            <div className="modern-chip-row">
+              {focusTopics.map((topic) => (
+                <span key={topic} className="modern-chip">
+                  {topic}
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <article className="modern-card modern-card-accent">
+            <h2>Receive Updates</h2>
+            <p>
+              Send a request to{" "}
+              <a href="mailto:info@stemexcellencepublishers.com">
+                info@stemexcellencepublishers.com
+              </a>{" "}
+              to receive key editorial notices and publication calls.
+            </p>
+          </article>
         </section>
       </div>
     </SiteLayout>
