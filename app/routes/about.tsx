@@ -3,44 +3,83 @@ import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/about";
 
 const highlights = [
-  { value: "Open Access", label: "Publishing model" },
-  { value: "STEM-First", label: "Editorial focus" },
-  { value: "Practice Ready", label: "Learning outcomes" },
+  { value: "Independent", label: "STEM-focused publisher" },
+  { value: "Africa + Global South", label: "Core impact region" },
+  { value: "Open Access", label: "Supported distribution pathway" },
 ];
 
-const principles = [
+const missionVisionValues = [
   {
-    title: "Clarity and Structure",
+    title: "Our Mission",
     description:
-      "Each manuscript is edited for readability, strong chapter flow, and clear instructional outcomes.",
+      "To accelerate STEM learning and innovation by publishing accessible, high-quality educational resources and enabling open-access distribution for wider impact.",
   },
   {
-    title: "Ethical Publishing",
+    title: "Our Vision",
     description:
-      "We apply transparent editorial standards on attribution, originality, and responsible scientific communication.",
+      "A world where every learner, regardless of geography or income, can access high-quality STEM knowledge and develop skills to solve real societal problems.",
   },
   {
-    title: "Practical Relevance",
+    title: "Our Values",
     description:
-      "Priority is given to books and guides that can be taught, implemented, and reused in real learning contexts.",
+      "Access and equity, quality and integrity, local relevance, innovation, and community impact guide our publishing model.",
   },
 ];
 
 const founders = [
   {
     name: "Blessings G. Malimusi",
-    role: "Co-founder | Editorial and Learning Design",
+    role: "Co-Founder",
+    image: "/blessings-g-malimusi.jpg",
     summary:
-      "Leads content quality, instructional structure, and alignment of books with STEM learning pathways.",
-    strengths: ["Curriculum design", "Applied modelling", "Technical editing"],
+      "Committed to strengthening STEM learning through practical, high-quality publishing and long-term educational partnerships.",
   },
   {
-    name: "Trust Chifunga",
-    role: "Co-founder | Publishing Strategy and Operations",
+    name: "Trust P. Chifunga",
+    role: "Co-Founder",
+    image: "/trust-p-chifunga.jpg",
     summary:
-      "Leads publishing operations, author support, and strategic partnerships for sustainable dissemination.",
-    strengths: ["Editorial operations", "Outreach", "Publishing strategy"],
+      "Focused on expanding access to rigorous and readable STEM resources across Africa and beyond.",
   },
+];
+
+const valuePillars = [
+  {
+    title: "Access and Equity",
+    description: "Knowledge should be reachable, affordable, and inclusive.",
+  },
+  {
+    title: "Quality and Integrity",
+    description: "Peer-aware standards, credible references, and clear writing.",
+  },
+  {
+    title: "Local Relevance",
+    description: "STEM content linked to real contexts and practical challenges.",
+  },
+  {
+    title: "Innovation",
+    description: "Modern tools, digital-first distribution, and adaptable formats.",
+  },
+  {
+    title: "Community Impact",
+    description: "Education that builds capability and confidence.",
+  },
+];
+
+const whoWeServe = [
+  "Students and self-learners",
+  "Teachers and lecturers",
+  "Researchers converting expertise into books",
+  "STEM outreach programmes and NGOs",
+  "Universities, schools, and training centres",
+];
+
+const whyChooseUs = [
+  "STEM-first focus with strong technical structure",
+  "Clarity-driven writing for teachable and readable content",
+  "Flexible publishing models, including open-access options",
+  "Africa-aware relevance for local contexts and constraints",
+  "Professional print and digital design standards",
 ];
 
 export function meta({}: Route.MetaArgs) {
@@ -49,7 +88,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Learn about the mission, values, and founders of STEM Excellence Publishers.",
+        "Learn about STEM Excellence Publishers, our mission, vision, values, and who we serve.",
     },
   ];
 }
@@ -66,7 +105,7 @@ export default function About() {
         <PageIntro
           breadcrumb="Home / About"
           title="About STEM Excellence Publishers"
-          lead="STEM Excellence Publishers advances STEM education through open-access books and practical research-informed learning resources."
+          lead="STEM Excellence Publishers is an independent STEM-focused publisher founded to strengthen science, engineering, and technology education through practical, well-written, and locally relevant resources."
         />
 
         <section className="modern-stat-grid" aria-label="About highlights">
@@ -80,17 +119,17 @@ export default function About() {
 
         <section className="modern-section">
           <div className="modern-section-head">
-            <h2 className="modern-section-title">Editorial Principles</h2>
+            <h2 className="modern-section-title">Mission, Vision, Values</h2>
             <p className="modern-section-note">
-              Every project is reviewed for quality, relevance, and educational impact.
+              We combine academic rigor with readability to build real learner competence.
             </p>
           </div>
 
           <div className="modern-grid three">
-            {principles.map((principle) => (
-              <article key={principle.title} className="modern-card">
-                <h3>{principle.title}</h3>
-                <p>{principle.description}</p>
+            {missionVisionValues.map((item) => (
+              <article key={item.title} className="modern-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
@@ -98,25 +137,60 @@ export default function About() {
 
         <section className="modern-section">
           <div className="modern-section-head">
-            <h2 className="modern-section-title">Founding Team</h2>
+            <h2 className="modern-section-title">Value Pillars</h2>
+          </div>
+
+          <div className="modern-grid three">
+            {valuePillars.map((pillar) => (
+              <article key={pillar.title} className="modern-card">
+                <h3>{pillar.title}</h3>
+                <p>{pillar.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="modern-grid two modern-section">
+          <article className="modern-card">
+            <h2>Who We Serve</h2>
+            <ul className="modern-list">
+              {whoWeServe.map((group) => (
+                <li key={group}>{group}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="modern-card modern-card-accent">
+            <h2>Why STEM Excellence Publishers</h2>
+            <ul className="modern-list">
+              {whyChooseUs.map((reason) => (
+                <li key={reason}>{reason}</li>
+              ))}
+            </ul>
+          </article>
+        </section>
+
+        <section className="modern-section">
+          <div className="modern-section-head">
+            <h2 className="modern-section-title">About the Founders</h2>
           </div>
 
           <div className="modern-grid two">
             {founders.map((founder) => (
               <article key={founder.name} className="modern-card">
+                {founder.image ? (
+                  <img src={founder.image} alt={founder.name} className="founder-profile-image" />
+                ) : null}
                 <p className="modern-kicker">{founder.role}</p>
                 <h3>{founder.name}</h3>
                 <p>{founder.summary}</p>
-                <div className="modern-chip-row">
-                  {founder.strengths.map((strength) => (
-                    <span key={strength} className="modern-chip">
-                      {strength}
-                    </span>
-                  ))}
-                </div>
               </article>
             ))}
           </div>
+          <p className="modern-footnote">
+            Detailed founder biographies will be published from the back-cover profiles of our
+            books.
+          </p>
         </section>
       </div>
     </SiteLayout>
