@@ -1,5 +1,3 @@
-import type { FormEvent } from "react";
-
 import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/contact";
@@ -9,84 +7,75 @@ export function meta({}: Route.MetaArgs) {
     { title: "Contact | STEM Excellence Publishers" },
     {
       name: "description",
-      content: "Contact information and placeholder enquiry form for STEM Excellence Publishers.",
+      content: "Contact STEM Excellence Publishers for enquiries, submissions, and partnerships.",
     },
   ];
-}
-
-function onSubmit(event: FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  window.alert("Form is a placeholder for now.");
 }
 
 export default function Contact() {
   return (
     <SiteLayout compactFooterLinks={[{ to: "/for-authors", label: "For Authors" }]}>
-      <div className="site-container">
+      <div className="site-container modern-page">
         <PageIntro
           breadcrumb="Home / Contact"
           title="Contact"
-          lead="This form is local-only for now. During deployment, this can be connected to Netlify Forms."
+          lead="Reach the editorial team for general enquiries, manuscript submissions, and publishing partnerships."
         />
 
-        <section className="section">
-          <div className="grid-2">
-            <article className="content-card">
-              <h2>General enquiries</h2>
-              <p>
-                Email:{" "}
-                <a href="mailto:info@stemexcellencepublishers.com">
-                  info@stemexcellencepublishers.com
-                </a>{" "}
-                (placeholder)
-              </p>
-              <p>
-                Submissions:{" "}
-                <a href="mailto:submissions@stemexcellencepublishers.com">
-                  submissions@stemexcellencepublishers.com
-                </a>{" "}
-                (placeholder)
-              </p>
-              <div className="tagrow">
-                <span className="tag">Response time</span>
-                <span className="tag">Support</span>
-              </div>
-            </article>
+        <section className="modern-grid two">
+          <article className="modern-card modern-card-accent">
+            <h2>Contact Channels</h2>
+            <p>
+              General enquiries:{" "}
+              <a href="mailto:info@stemexcellencepublishers.com">
+                info@stemexcellencepublishers.com
+              </a>
+            </p>
+            <p>
+              Manuscript submissions:{" "}
+              <a href="mailto:submissions@stemexcellencepublishers.com">
+                submissions@stemexcellencepublishers.com
+              </a>
+            </p>
+            <ul className="modern-list">
+              <li>Editorial enquiries and collaboration requests</li>
+              <li>Author support and submission guidance</li>
+              <li>Institutional and program partnerships</li>
+            </ul>
+          </article>
 
-            <article className="content-card">
-              <h2>Message</h2>
-              <form className="form-grid" onSubmit={onSubmit}>
-                <input className="form-input" type="text" name="name" placeholder="Your name" required />
-                <input
-                  className="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                />
-                <input
-                  className="form-input"
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
-                <textarea
-                  className="form-textarea"
-                  name="message"
-                  placeholder="Your message"
-                  required
-                />
-                <button className="ref-btn ref-btn-primary form-submit" type="submit">
-                  Send message
-                </button>
-              </form>
-            </article>
-          </div>
-
-          <div className="notice-box">
-            If you want Netlify Forms next, this page can be wired without adding a backend.
-          </div>
+          <article className="modern-card">
+            <h2>Send a Message</h2>
+            <form
+              className="modern-form"
+              action="mailto:info@stemexcellencepublishers.com"
+              method="post"
+              encType="text/plain"
+            >
+              <label className="modern-field">
+                <span>Full name</span>
+                <input className="modern-input" type="text" name="name" required />
+              </label>
+              <label className="modern-field">
+                <span>Email address</span>
+                <input className="modern-input" type="email" name="email" required />
+              </label>
+              <label className="modern-field">
+                <span>Subject</span>
+                <input className="modern-input" type="text" name="subject" required />
+              </label>
+              <label className="modern-field">
+                <span>Message</span>
+                <textarea className="modern-textarea" name="message" required />
+              </label>
+              <button className="modern-submit" type="submit">
+                Open Email Draft
+              </button>
+            </form>
+            <p className="modern-footnote">
+              Submitting this form opens your default email application with your message details.
+            </p>
+          </article>
         </section>
       </div>
     </SiteLayout>
