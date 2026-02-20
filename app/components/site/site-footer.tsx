@@ -10,7 +10,7 @@ type SiteFooterProps = {
   compactLinks?: FooterLink[];
 };
 
-export function SiteFooter({ mode = "compact", compactLinks = [] }: SiteFooterProps) {
+export function SiteFooter({ mode = "full", compactLinks = [] }: SiteFooterProps) {
   const year = new Date().getFullYear();
 
   if (mode === "full") {
@@ -22,8 +22,8 @@ export function SiteFooter({ mode = "compact", compactLinks = [] }: SiteFooterPr
               <img src="/stem-logo.jpeg" alt="STEM Excellence Publishers" className="brand-logo" />
             </div>
             <p className="site-small-text">
-              Founded by Blessings G. Malimusi and Trust Chifunga. Open-access STEM publishing for
-              education and research impact.
+              STEM Excellence Publishers - Open-access and mission-driven publishing for STEM
+              education, capacity-building, and innovation.
             </p>
           </div>
           <div>
