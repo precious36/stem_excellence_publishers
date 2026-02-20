@@ -2,45 +2,34 @@ import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/books";
 
-const catalogueTracks = [
+const bookCatalogue = [
   {
-    title: "STEM Foundations Series",
-    audience: "Secondary to first-year tertiary learners",
-    focus: "Concept-first books that bridge mathematics, science, and real-world problem solving.",
+    title: "Chemistry For Malawi",
+    volume: "Student's Book 1",
+    frontImage: "/chemistry-for-malawi-book-1.jpg",
+    backImage: "/chemistry-for-malawi-book-1-back.jpg",
+    isbn: "ISBN 978-99960-099-5-2",
   },
   {
-    title: "Applied Engineering Guides",
-    audience: "Technical colleges and undergraduate programs",
-    focus:
-      "Practice-driven references with worked examples, design workflows, and implementation notes.",
+    title: "Chemistry For Malawi",
+    volume: "Student's Book 2",
+    frontImage: "/chemistry-for-malawi-book-2.jpg",
+    backImage: "/chemistry-for-malawi-book-2-back.jpg",
+    isbn: "ISBN 978-99960-099-6-9",
   },
   {
-    title: "Computing and Data Skills",
-    audience: "Beginner to intermediate digital learners",
-    focus:
-      "Hands-on introductions to coding, data analysis, and computational thinking for STEM contexts.",
-  },
-];
-
-const publicationStandards = [
-  "ISBN-ready bibliographic metadata",
-  "Structured chapter abstracts and keywords",
-  "Consistent citation and reference formatting",
-  "Teaching-friendly visuals and figure captions",
-];
-
-const releaseSteps = [
-  {
-    title: "Manuscript Review",
-    detail: "Editorial screening for fit, quality, and audience alignment.",
+    title: "Chemistry For Malawi",
+    volume: "Student's Book 3",
+    frontImage: "/chemistry-for-malawi-book-3.jpg",
+    backImage: "/chemistry-for-malawi-book-3-back.jpg",
+    isbn: "ISBN 978-99960-099-7-6",
   },
   {
-    title: "Production",
-    detail: "Copyediting, layout standardization, and metadata preparation.",
-  },
-  {
-    title: "Catalogue Launch",
-    detail: "Public release with listing details and discoverability support.",
+    title: "Chemistry For Malawi",
+    volume: "Student's Book 4",
+    frontImage: "/chemistry-for-malawi-book-4.jpg",
+    backImage: "/chemistry-for-malawi-book-4-back.jpg",
+    isbn: "ISBN 978-99960-082-4-5",
   },
 ];
 
@@ -49,7 +38,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Books | STEM Excellence Publishers" },
     {
       name: "description",
-      content: "Explore catalogue tracks and publication standards at STEM Excellence Publishers.",
+      content:
+        "View the STEM Excellence Publishers book catalogue with front and back covers for each title.",
     },
   ];
 }
@@ -60,47 +50,43 @@ export default function Books() {
       <div className="site-container modern-page">
         <PageIntro
           breadcrumb="Home / Books"
-          title="Books & Catalogue"
-          lead="Explore the catalogue tracks and standards used to prepare every title for learning impact and citation readiness."
+          title="Books Catalogue"
+          lead="Browse our catalogue with paired front and back covers for each Chemistry For Malawi title."
         />
-
-        <section className="modern-grid two">
-          <article className="modern-card">
-            <h2>Catalogue Tracks</h2>
-            <div className="modern-stack">
-              {catalogueTracks.map((track) => (
-                <article key={track.title} className="modern-mini-card">
-                  <h3>{track.title}</h3>
-                  <p className="modern-muted">{track.audience}</p>
-                  <p>{track.focus}</p>
-                </article>
-              ))}
-            </div>
-          </article>
-
-          <article className="modern-card modern-card-accent">
-            <h2>Publication Standards</h2>
-            <ul className="modern-list">
-              {publicationStandards.map((standard) => (
-                <li key={standard}>{standard}</li>
-              ))}
-            </ul>
-          </article>
-        </section>
 
         <section className="modern-section">
           <div className="modern-section-head">
-            <h2 className="modern-section-title">Release Workflow</h2>
+            <h2 className="modern-section-title">Chemistry For Malawi Series</h2>
           </div>
-          <div className="modern-grid three">
-            {releaseSteps.map((step) => (
-              <article key={step.title} className="modern-card">
-                <p className="modern-kicker">{step.title}</p>
-                <p>{step.detail}</p>
+          <div className="book-catalogue-grid">
+            {bookCatalogue.map((book) => (
+              <article key={book.volume} className="modern-card book-catalogue-card">
+                <p className="modern-kicker">{book.volume}</p>
+                <h3>{book.title}</h3>
+                <div className="book-cover-pair">
+                  <figure className="book-cover-frame">
+                    <img
+                      src={book.frontImage}
+                      alt={`${book.title} ${book.volume} front cover`}
+                      className="book-cover-image"
+                    />
+                    <figcaption>Front Cover</figcaption>
+                  </figure>
+                  <figure className="book-cover-frame">
+                    <img
+                      src={book.backImage}
+                      alt={`${book.title} ${book.volume} back cover`}
+                      className="book-cover-image"
+                    />
+                    <figcaption>Back Cover</figcaption>
+                  </figure>
+                </div>
+                <p className="modern-muted">{book.isbn}</p>
               </article>
             ))}
           </div>
         </section>
+
       </div>
     </SiteLayout>
   );
