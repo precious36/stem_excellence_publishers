@@ -11,7 +11,7 @@ type SiteLayoutProps = {
 
 export function SiteLayout({
   children,
-  footerMode = "compact",
+  footerMode = "full",
   compactFooterLinks = [],
 }: SiteLayoutProps) {
   return (
