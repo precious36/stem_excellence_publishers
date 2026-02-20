@@ -92,10 +92,15 @@ export default function Contact() {
           <article className="modern-card">
             <h2>Submission Reminder</h2>
             <p>
-              Manuscripts can be submitted at proposal or draft stage. Include your title, target
-              audience, provisional table of contents, sample chapter, and preferred publishing
-              route.
+              Manuscripts can be submitted at proposal or draft stage. Include:
             </p>
+            <ul className="modern-list">
+              <li>Title</li>
+              <li>Target audience</li>
+              <li>Provisional table of contents</li>
+              <li>Sample chapter</li>
+              <li>Preferred publishing route</li>
+            </ul>
           </article>
         </section>
       </div>
