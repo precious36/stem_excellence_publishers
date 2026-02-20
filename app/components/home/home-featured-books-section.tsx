@@ -2,24 +2,24 @@ import { Link } from "react-router";
 
 const featuredBooks = [
   {
-    title: "Introduction to Robotics",
-    subtitle: "A Student Guide",
-    style: "from-sky-900 via-blue-700 to-indigo-500",
+    title: "Chemistry For Malawi",
+    subtitle: "Student's Book 1",
+    image: "/chemistry-for-malawi-book-1.jpg",
   },
   {
-    title: "Essential Mathematics",
-    subtitle: "Volume One",
-    style: "from-blue-950 via-blue-700 to-cyan-500",
+    title: "Chemistry For Malawi",
+    subtitle: "Student's Book 2",
+    image: "/chemistry-for-malawi-book-2.jpg",
   },
   {
-    title: "Practical Mathematics",
-    subtitle: "Applied Edition",
-    style: "from-emerald-900 via-green-700 to-lime-400",
+    title: "Chemistry For Malawi",
+    subtitle: "Student's Book 3",
+    image: "/chemistry-for-malawi-book-3.jpg",
   },
   {
-    title: "Science & Outreach",
-    subtitle: "For Future Innovators",
-    style: "from-amber-700 via-orange-500 to-yellow-300",
+    title: "Chemistry For Malawi",
+    subtitle: "Student's Book 4",
+    image: "/chemistry-for-malawi-book-4.jpg",
   },
 ];
 
@@ -33,18 +33,23 @@ export function HomeFeaturedBooksSection() {
 
         <div className="home-books-grid">
           {featuredBooks.map((book) => (
-            <article key={book.title} className="home-book-card">
-              <div className={`home-book-cover bg-gradient-to-b ${book.style}`}>
-                <p className="home-book-subtitle">{book.subtitle}</p>
-                <h3 className="home-book-title">{book.title}</h3>
+            <article key={book.subtitle} className="home-book-card">
+              <div className="home-book-cover">
+                <img
+                  src={book.image}
+                  alt={`${book.title} ${book.subtitle} cover`}
+                  className="home-book-cover-image"
+                />
               </div>
+              <p className="home-book-subtitle">{book.subtitle}</p>
+              <h3 className="home-book-title">{book.title}</h3>
             </article>
           ))}
         </div>
 
         <div className="home-books-action">
           <Link className="ref-btn ref-btn-secondary" to="/books">
-            View All Books
+            Explore all books
           </Link>
         </div>
       </div>
