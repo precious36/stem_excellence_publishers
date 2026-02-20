@@ -99,13 +99,11 @@ export default function Services() {
             <article key={service.name} className="modern-card">
               <h2>{service.name}</h2>
               <p>{service.summary}</p>
-              <div className="modern-chip-row">
+              <ul className="modern-list">
                 {service.outputs.map((output) => (
-                  <span key={output} className="modern-chip">
-                    {output}
-                  </span>
+                  <li key={output}>{output}</li>
                 ))}
-              </div>
+              </ul>
             </article>
           ))}
         </section>
@@ -113,15 +111,16 @@ export default function Services() {
         <section className="modern-grid two modern-section">
           <article className="modern-card modern-card-accent">
             <h2>Open Access and Free Distribution</h2>
-            <p>
-              STEM Excellence Publishers supports open-access pathways to increase educational
-              reach. Selected titles are distributed free of charge under author and partner
-              agreements, especially for underserved communities and learner access programmes.
-            </p>
-            <p>
-              We prioritize mobile-friendly formats and trusted download channels where open access
-              is selected.
-            </p>
+            <ul className="modern-list">
+              <li>Open-access pathways are available to increase educational reach.</li>
+              <li>
+                Selected titles are distributed free of charge under author and partner agreements.
+              </li>
+              <li>
+                Priority is given to underserved communities and learner-access programmes.
+              </li>
+              <li>Mobile-friendly formats and trusted download channels are prioritized.</li>
+            </ul>
           </article>
 
           <article className="modern-card">
