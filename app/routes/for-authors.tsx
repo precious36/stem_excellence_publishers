@@ -107,13 +107,14 @@ export default function ForAuthors() {
               </a>
               .
             </p>
-            <p>
-              Use the subject format <strong className="site-strong-text">Submission | Title | Field</strong>.
-            </p>
-            <p>
-              Include a short cover note with the intended audience, educational objective, and
-              preferred publishing route.
-            </p>
+            <ul className="modern-list">
+              <li>
+                Use the subject format{" "}
+                <strong className="site-strong-text">Submission | Title | Field</strong>.
+              </li>
+              <li>Include your intended audience and educational objective.</li>
+              <li>State your preferred publishing route (open access, standard, or supported).</li>
+            </ul>
           </article>
         </section>
 
