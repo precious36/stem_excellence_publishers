@@ -1,19 +1,19 @@
 import { HomeFeaturedBooksSection } from "../components/home/home-featured-books-section";
 import { HomeFocusAreasSection } from "../components/home/home-focus-areas-section";
-import { HomeFoundersSection } from "../components/home/home-founders-section";
 import { HomeHeroSection } from "../components/home/home-hero-section";
 import { HomeHighlightsSection } from "../components/home/home-highlights-section";
 import { HomeFocusPillarsSection } from "../components/home/home-focus-pillars-section";
+import { HomePublishStepsSection } from "../components/home/home-publish-steps-section";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "STEM Excellence Publishers | Advancing STEM Education in Africa" },
+    { title: "STEM Excellence Publishers | Open Access STEM Publishing" },
     {
       name: "description",
       content:
-        "Open-access STEM publishing platform featuring books, manuscript submission, and author services.",
+        "Mission-driven STEM publishing platform expanding accessible books and learning resources for Africa and the wider Global South.",
     },
   ];
 }
@@ -26,7 +26,7 @@ export default function Home() {
       <HomeHighlightsSection />
       <HomeFocusPillarsSection />
       <HomeFeaturedBooksSection />
-      <HomeFoundersSection />
+      <HomePublishStepsSection />
     </SiteLayout>
   );
 }
