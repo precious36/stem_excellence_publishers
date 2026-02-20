@@ -1,15 +1,12 @@
 {
   "name": "stem_excellence_publishers",
-  "homepage": "https://precious36.github.io/stem_excellence_publishers",
   "private": true,
   "type": "module",
   "scripts": {
-   "build": "react-router build",
+    "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client"
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "7.12.0",
