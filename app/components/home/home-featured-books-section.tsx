@@ -4,22 +4,22 @@ const featuredBooks = [
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 1",
-    image: "/chemistry-for-malawi-book-1.jpg",
+    image: "/red front.jpg",
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 2",
-    image: "/chemistry-for-malawi-book-2.jpg",
+    image: "/blue front.jpg",
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 3",
-    image: "/chemistry-for-malawi-book-3.jpg",
+    image: "/dark blue front.jpg",
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 4",
-    image: "/chemistry-for-malawi-book-4.jpg",
+    image: "/brown front.jpg",
   },
 ];
 
