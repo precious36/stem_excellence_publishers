@@ -2,35 +2,38 @@ import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/blog";
 
-const updateStreams = [
+const faqs = [
   {
-    title: "Editorial Notices",
-    detail: "Policy updates, submission windows, and decisions affecting authors and partners.",
+    question: "Do you only publish textbooks?",
+    answer:
+      "No. We publish textbooks, revision guides, STEM outreach titles, academic monographs, and practical professional guides.",
   },
   {
-    title: "Calls for Manuscripts",
-    detail: "Focused calls by discipline, level, and publication timeline.",
+    question: "Do you support open-access publishing?",
+    answer:
+      "Yes. Selected titles can be released free of charge when authors or partners choose open distribution, or where sponsorship supports open access.",
   },
   {
-    title: "Release Announcements",
-    detail: "New title launches, catalogue additions, and featured teaching resources.",
+    question: "Do you accept first-time authors?",
+    answer:
+      "Yes. We support both experienced and first-time authors, especially when technical content is strong and the educational purpose is clear.",
   },
 ];
 
-const focusTopics = [
-  "Mathematics education",
-  "Engineering learning resources",
-  "Computing and data literacy",
-  "Open educational publishing",
-  "STEM curriculum development",
+const partnershipAreas = [
+  "Free or subsidised educational distribution",
+  "Sponsored open-access titles",
+  "Curriculum-aligned publishing initiatives",
+  "STEM reading programmes and community libraries",
+  "Author development workshops and writing support",
 ];
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Blog | STEM Excellence Publishers" },
+    { title: "FAQs | STEM Excellence Publishers" },
     {
       name: "description",
-      content: "Announcements, calls for chapters, releases, and updates.",
+      content: "Frequently asked questions and partnership support areas.",
     },
   ];
 }
@@ -40,40 +43,42 @@ export default function Blog() {
     <SiteLayout compactFooterLinks={[{ to: "/for-authors", label: "Submit" }]}>
       <div className="site-container modern-page">
         <PageIntro
-          breadcrumb="Home / Blog"
-          title="Editorial Updates"
-          lead="This section publishes official announcements, calls for manuscripts, and release updates."
+          breadcrumb="Home / FAQs"
+          title="Frequently Asked Questions"
+          lead="Answers to common questions about publishing models, submissions, and author support."
         />
 
         <section className="modern-grid three">
-          {updateStreams.map((stream) => (
-            <article key={stream.title} className="modern-card">
-              <h2>{stream.title}</h2>
-              <p>{stream.detail}</p>
+          {faqs.map((faq) => (
+            <article key={faq.question} className="modern-card">
+              <h2>{faq.question}</h2>
+              <p>{faq.answer}</p>
             </article>
           ))}
         </section>
 
         <section className="modern-grid two modern-section">
           <article className="modern-card">
-            <h2>Topics We Cover</h2>
-            <div className="modern-chip-row">
-              {focusTopics.map((topic) => (
-                <span key={topic} className="modern-chip">
-                  {topic}
-                </span>
+            <h2>Partner With Us</h2>
+            <p>
+              We partner with schools, universities, NGOs, and STEM programmes to expand access to
+              quality learning resources.
+            </p>
+            <ul className="modern-list">
+              {partnershipAreas.map((area) => (
+                <li key={area}>{area}</li>
               ))}
-            </div>
+            </ul>
           </article>
 
           <article className="modern-card modern-card-accent">
-            <h2>Receive Updates</h2>
+            <h2>Need More Information?</h2>
             <p>
-              Send a request to{" "}
+              Send your questions to{" "}
               <a href="mailto:info@stemexcellencepublishers.com">
                 info@stemexcellencepublishers.com
               </a>{" "}
-              to receive key editorial notices and publication calls.
+              and we will guide you on submissions, services, or partnership pathways.
             </p>
           </article>
         </section>
