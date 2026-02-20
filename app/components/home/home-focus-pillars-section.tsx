@@ -1,21 +1,21 @@
 const pillars = [
   {
-    code: "ET",
-    title: "Engineering & Technology",
+    code: "MI",
+    title: "Our Mission",
     description:
-      "Applied resources for chemical, mechanical, electrical, and process engineering education and practice.",
+      "To accelerate STEM learning and innovation by publishing accessible, high-quality educational resources and enabling open-access distribution for wider impact.",
   },
   {
-    code: "MC",
-    title: "Math & Computing",
+    code: "VI",
+    title: "Our Vision",
     description:
-      "Problem-driven materials coding, modelling, numerical methods, data analysis, and scientific computing.",
+      "A world where every learner, regardless of geography or income, can access high-quality STEM knowledge and build skills to solve real societal problems.",
   },
   {
-    code: "SO",
-    title: "Science & Outreach",
+    code: "VA",
+    title: "Our Values",
     description:
-      "Accessible science communication and outreach materials to inspire and support the next generation.",
+      "Access and equity, quality and integrity, local relevance, innovation, and community impact guide every project we publish.",
   },
 ];
 
@@ -24,8 +24,8 @@ export function HomeFocusPillarsSection() {
     <section className="focus-pillars">
       <div className="site-container">
         <div className="focus-pillars-header">
-          <h2>Focus areas</h2>
-          <p>Three pillars to keep the site simple and scalable.</p>
+          <h2>Mission, Vision, Values</h2>
+          <p>The principles that shape every title and partnership.</p>
         </div>
 
         <div className="focus-pillars-grid">
