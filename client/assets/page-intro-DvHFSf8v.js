@@ -1,0 +1,1 @@
+import{p as s}from"./chunk-EPOLDU6W-Hvs9Ewie.js";function t({breadcrumb:a,title:n,lead:r}){const c=Array.isArray(r)?r:[r];return s.jsxs(s.Fragment,{children:[s.jsx("div",{className:"breadcrumbs",children:a}),s.jsxs("section",{className:"page-head",children:[s.jsx("h1",{children:n}),c.map(e=>s.jsx("p",{className:"lead",children:e},e))]})]})}export{t as P};
