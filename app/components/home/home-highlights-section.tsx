@@ -1,5 +1,14 @@
-const publishTags = ["Textbooks", "Lab guides", "Open-source modelling", "Teaching resources"];
-const promiseTags = ["Quality control", "Templates", "Fast updates"];
+const identityTags = [
+  "Independent STEM publisher",
+  "Academic rigor and readability",
+  "Africa and Global South focus",
+];
+const valueTags = [
+  "STEM-first focus",
+  "Clarity obsession",
+  "Flexible publishing models",
+  "Open-access pathways",
+];
 
 export function HomeHighlightsSection() {
   return (
@@ -7,13 +16,14 @@ export function HomeHighlightsSection() {
       <div className="site-container">
         <div className="home-highlights-grid">
           <article className="home-highlight-card">
-            <h2>What we publish</h2>
+            <h2>Who we are</h2>
             <p>
-              Engineering, computing, mathematics, and science outreach designed to be usable,
-              teachable, and reproducible.
+              STEM Excellence Publishers is an independent publisher focused on practical,
+              well-written, and locally relevant resources for secondary, university, and
+              early-career STEM learners.
             </p>
             <div className="home-highlight-tags">
-              {publishTags.map((tag) => (
+              {identityTags.map((tag) => (
                 <span key={tag} className="tag home-highlight-tag">
                   {tag}
                 </span>
@@ -22,13 +32,13 @@ export function HomeHighlightsSection() {
           </article>
 
           <article className="home-highlight-card">
-            <h2>Our promise</h2>
+            <h2>Why choose us</h2>
             <p>
-              Clear formatting, ethical publishing, and practical STEM content that supports
-              learners and educators.
+              We prioritize technically accurate writing, clean design, and locally relevant STEM
+              context while supporting both standard and open-access publishing routes.
             </p>
             <div className="home-highlight-tags">
-              {promiseTags.map((tag) => (
+              {valueTags.map((tag) => (
                 <span key={tag} className="tag home-highlight-tag">
                   {tag}
                 </span>
