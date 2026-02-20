@@ -1,23 +1,23 @@
 const publishSteps = [
   {
-    title: "Step 1 - Prepare",
+    title: "Step 1 - Define your proposal",
     description:
-      "Use our manuscript checklist and templates to align formatting, references, and structure.",
+      "Start with a clear title, topic area, and target audience so the manuscript goals are explicit from the beginning.",
   },
   {
-    title: "Step 2 - Submit",
+    title: "Step 2 - Share core content",
     description:
-      "Send your manuscript with a short cover note and your preferred publishing route.",
+      "Provide a provisional table of contents and a sample chapter (or 10-20 pages), including figures and tables where available.",
   },
   {
-    title: "Step 3 - Review",
+    title: "Step 3 - Choose a publishing route",
     description:
-      "Editorial screening and quality checks for clarity, ethics, and audience fit.",
+      "Tell us whether you prefer open access, a standard release, or a partnership-supported pathway.",
   },
   {
-    title: "Step 4 - Publish",
+    title: "Step 4 - Review to publication",
     description:
-      "We release and promote your work with citation-ready metadata and a clean landing page.",
+      "We guide development, quality assurance, design, and distribution to move your manuscript into a publish-ready title.",
   },
 ];
 
@@ -26,8 +26,8 @@ export function HomePublishStepsSection() {
     <section className="publish-journey-section">
       <div className="site-container">
         <div className="publish-journey-header">
-          <h2>Publish with us</h2>
-          <p>A simple path for authors.</p>
+          <h2>Submit a Manuscript</h2>
+          <p>We welcome STEM manuscripts from early proposals to complete drafts.</p>
         </div>
 
         <div className="publish-journey-grid">
