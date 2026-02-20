@@ -21,9 +21,16 @@ const missionVisionValues = [
   },
   {
     title: "Our Values",
-    description:
-      "Access and equity, quality and integrity, local relevance, innovation, and community impact guide our publishing model.",
+    description: "These principles guide our publishing model.",
   },
+];
+
+const coreValues = [
+  "Access and equity",
+  "Quality and integrity",
+  "Local relevance",
+  "Innovation",
+  "Community impact",
 ];
 
 const founders = [
@@ -31,15 +38,11 @@ const founders = [
     name: "Blessings G. Malimusi",
     role: "Co-Founder",
     image: "/blessings-g-malimusi.jpg",
-    summary:
-      "Committed to strengthening STEM learning through practical, high-quality publishing and long-term educational partnerships.",
   },
   {
     name: "Trust P. Chifunga",
     role: "Co-Founder",
     image: "/trust-p-chifunga.jpg",
-    summary:
-      "Focused on expanding access to rigorous and readable STEM resources across Africa and beyond.",
   },
 ];
 
@@ -105,7 +108,10 @@ export default function About() {
         <PageIntro
           breadcrumb="Home / About"
           title="About STEM Excellence Publishers"
-          lead="STEM Excellence Publishers is an independent STEM-focused publisher founded to strengthen science, engineering, and technology education through practical, well-written, and locally relevant resources."
+          lead={[
+            "STEM Excellence Publishers is an independent STEM-focused publisher founded to strengthen science, engineering, and technology education through practical, well-written, and locally relevant resources. We work with authors, educators, researchers, and institutions to publish textbooks, revision guides, academic monographs, outreach titles, and professional development materials that support learners from secondary school through university and early-career practice.",
+            "We combine academic rigor with readability: content that is technically correct, clearly explained, and designed to help learners build real competence - not just pass exams.",
+          ]}
         />
 
         <section className="modern-stat-grid" aria-label="About highlights">
@@ -130,6 +136,13 @@ export default function About() {
               <article key={item.title} className="modern-card">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                {item.title === "Our Values" ? (
+                  <ul className="modern-list">
+                    {coreValues.map((value) => (
+                      <li key={value}>{value}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </article>
             ))}
           </div>
@@ -174,8 +187,17 @@ export default function About() {
           <div className="modern-section-head">
             <h2 className="modern-section-title">About the Founders</h2>
           </div>
+          <article className="modern-card">
+            <p>
+              STEM Excellence Publishers was founded by Blessings G. Malimusi and Trust P.
+              Chifunga, both committed to strengthening STEM learning through high-quality,
+              practical publishing. The founders share a long-term vision: to reduce barriers to
+              STEM education by producing resources that are rigorous, readable, and accessible -
+              and by building partnerships that enable wider distribution across Africa and beyond.
+            </p>
+          </article>
 
-          <div className="modern-grid two">
+          <div className="modern-grid two modern-section">
             {founders.map((founder) => (
               <article key={founder.name} className="modern-card">
                 {founder.image ? (
@@ -183,14 +205,9 @@ export default function About() {
                 ) : null}
                 <p className="modern-kicker">{founder.role}</p>
                 <h3>{founder.name}</h3>
-                <p>{founder.summary}</p>
               </article>
             ))}
           </div>
-          <p className="modern-footnote">
-            Detailed founder biographies will be published from the back-cover profiles of our
-            books.
-          </p>
         </section>
       </div>
     </SiteLayout>
