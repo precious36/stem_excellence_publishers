@@ -20,13 +20,18 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="nav-toggle"
+          className={`nav-toggle ${menuOpen ? "is-open" : ""}`}
           data-nav-toggle
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
           aria-controls="site-nav"
           onClick={() => setMenuOpen((current) => !current)}
         >
-          Menu
+          <span className="nav-toggle-icon" aria-hidden="true">
+            <span className="nav-toggle-line" />
+            <span className="nav-toggle-line" />
+            <span className="nav-toggle-line" />
+          </span>
         </button>
 
         <nav id="site-nav" className={`site-nav ${menuOpen ? "is-open" : ""}`}>
