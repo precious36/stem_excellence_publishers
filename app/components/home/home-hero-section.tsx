@@ -6,11 +6,13 @@ export function HomeHeroSection() {
       <div className="home-hero-visual" aria-hidden="true">
         <div className="home-hero-image home-hero-scientist" />
         <div className="home-hero-image home-hero-engineer" />
+        <div className="home-hero-image home-hero-slider-two" />
+        <div className="home-hero-image home-hero-slider-three" />
         <div className="home-hero-image home-hero-scientist" />
       </div>
       <div className="home-hero-overlay" />
       <div className="site-container home-hero-content">
-        <h1>Advancing STEM Education Through Open Access Publishing</h1>
+        <h1>Advancing STEM Education And Research Through Open Access Publishing</h1>
         <p className="home-hero-lead">
           STEM Excellence Publishers is a mission-driven publishing platform dedicated to expanding
           high-quality STEM learning materials for Africa and the wider Global South. We publish,
