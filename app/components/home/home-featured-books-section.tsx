@@ -1,25 +1,31 @@
 import { Link } from "react-router";
 
+const FEATURED_BOOK_PRICE = "K20,0000";
+
 const featuredBooks = [
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 1",
     image: "/red front.jpg",
+    price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 2",
     image: "/blue front.jpg",
+    price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 3",
     image: "/dark blue front.jpg",
+    price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 4",
     image: "/brown front.jpg",
+    price: FEATURED_BOOK_PRICE,
   },
 ];
 
@@ -35,14 +41,17 @@ export function HomeFeaturedBooksSection() {
           {featuredBooks.map((book) => (
             <article key={book.subtitle} className="home-book-card">
               <div className="home-book-cover">
-                <img
-                  src={book.image}
-                  alt={`${book.title} ${book.subtitle} cover`}
-                  className="home-book-cover-image"
-                />
+                <div className="home-book-cover-media">
+                  <img
+                    src={book.image}
+                    alt={`${book.title} ${book.subtitle} cover`}
+                    className="home-book-cover-image"
+                  />
+                </div>
               </div>
               <p className="home-book-subtitle">{book.subtitle}</p>
               <h3 className="home-book-title">{book.title}</h3>
+              <p className="home-book-price">Price: {book.price}</p>
             </article>
           ))}
         </div>
