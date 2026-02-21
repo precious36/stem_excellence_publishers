@@ -2,12 +2,15 @@ const identityTags = [
   "Independent STEM publisher",
   "Academic rigor and readability",
   "Africa and Global South focus",
+  "Curriculum-aware content design",
 ];
 const valueTags = [
   "STEM-first focus",
   "Clarity obsession",
   "Flexible publishing models",
   "Open-access pathways",
+  "Author development support",
+  "Institution and NGO partnerships",
 ];
 
 export function HomeHighlightsSection() {
@@ -21,6 +24,11 @@ export function HomeHighlightsSection() {
               STEM Excellence Publishers is an independent publisher focused on practical,
               well-written, and locally relevant resources for secondary, university, and
               early-career STEM learners.
+            </p>
+            <p>
+              We work with teachers, researchers, and institutions to translate strong technical
+              knowledge into books that are structured for real classroom use, self-study, and
+              long-term STEM capacity building across Malawi and the wider region.
             </p>
             <div className="home-highlight-tags">
               {identityTags.map((tag) => (
@@ -36,6 +44,11 @@ export function HomeHighlightsSection() {
             <p>
               We prioritize technically accurate writing, clean design, and locally relevant STEM
               context while supporting both standard and open-access publishing routes.
+            </p>
+            <p>
+              Our publishing process combines editorial guidance, quality checks, and practical
+              design standards so each title is easier to teach, easier to learn from, and better
+              suited to real educational constraints.
             </p>
             <div className="home-highlight-tags">
               {valueTags.map((tag) => (
