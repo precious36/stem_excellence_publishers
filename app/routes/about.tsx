@@ -2,11 +2,7 @@ import { PageIntro } from "../components/site/page-intro";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/about";
 
-const highlights = [
-  { value: "Independent", label: "STEM-focused publisher" },
-  { value: "Africa + Global South", label: "Core impact region" },
-  { value: "Open Access", label: "Supported distribution pathway" },
-];
+
 
 const missionVisionValues = [
   {
@@ -38,11 +34,15 @@ const founders = [
     name: "Blessings G. Malimusi",
     role: "Co-Founder",
     image: "/blessings-g-malimusi.jpg",
+    linkedin: "https://www.linkedin.com/in/blessings-malimusi-aa4393212/",
+    facebook: "https://web.facebook.com/blessings.malimusi",
   },
   {
     name: "Trust P. Chifunga",
     role: "Co-Founder",
     image: "/trust-p-chifunga.jpg",
+    linkedin: "https://www.linkedin.com/in/trust-chifunga-2635bb163/",
+    facebook: "https://www.linkedin.com/in/trust-chifunga-2635bb163/",
   },
 ];
 
@@ -114,14 +114,58 @@ export default function About() {
           ]}
         />
 
-        <section className="modern-stat-grid" aria-label="About highlights">
-          {highlights.map((item) => (
-            <article key={item.label} className="modern-stat-card">
-              <p className="modern-stat-value">{item.value}</p>
-              <p className="modern-stat-label">{item.label}</p>
-            </article>
-          ))}
+        <section className="modern-section">
+          <div className="modern-section-head">
+            <h2 className="modern-section-title">About the Founders</h2>
+          </div>
+          <article className="modern-card">
+            <p>
+              STEM Excellence Publishers was founded by Blessings G. Malimusi and Trust P.
+              Chifunga, both committed to strengthening STEM learning through high-quality,
+              practical publishing. The founders share a long-term vision: to reduce barriers to
+              STEM education by producing resources that are rigorous, readable, and accessible -
+              and by building partnerships that enable wider distribution across Africa and beyond.
+            </p>
+          </article>
+
+          <div className="modern-grid two modern-section">
+            {founders.map((founder) => (
+              <article key={founder.name} className="modern-card">
+                {founder.image ? (
+                  <img src={founder.image} alt={founder.name} className="founder-profile-image" />
+                ) : null}
+                <p className="modern-kicker">{founder.role}</p>
+                <h3>{founder.name}</h3>
+                <div className="founder-social-links" aria-label={`${founder.name} social links`}>
+                  <a
+                    href={founder.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="founder-social-link"
+                  >
+                    <span className="founder-social-icon" aria-hidden="true">
+                      <LinkedInIcon />
+                    </span>
+                    LinkedIn
+                  </a>
+                  <a
+                    href={founder.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="founder-social-link"
+                  >
+                    <span className="founder-social-icon" aria-hidden="true">
+                      <FacebookIcon />
+                    </span>
+                    Facebook
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
+
+       
 
         <section className="modern-section">
           <div className="modern-section-head">
@@ -183,33 +227,29 @@ export default function About() {
           </article>
         </section>
 
-        <section className="modern-section">
-          <div className="modern-section-head">
-            <h2 className="modern-section-title">About the Founders</h2>
-          </div>
-          <article className="modern-card">
-            <p>
-              STEM Excellence Publishers was founded by Blessings G. Malimusi and Trust P.
-              Chifunga, both committed to strengthening STEM learning through high-quality,
-              practical publishing. The founders share a long-term vision: to reduce barriers to
-              STEM education by producing resources that are rigorous, readable, and accessible -
-              and by building partnerships that enable wider distribution across Africa and beyond.
-            </p>
-          </article>
-
-          <div className="modern-grid two modern-section">
-            {founders.map((founder) => (
-              <article key={founder.name} className="modern-card">
-                {founder.image ? (
-                  <img src={founder.image} alt={founder.name} className="founder-profile-image" />
-                ) : null}
-                <p className="modern-kicker">{founder.role}</p>
-                <h3>{founder.name}</h3>
-              </article>
-            ))}
-          </div>
-        </section>
       </div>
     </SiteLayout>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" role="img" className="h-4 w-4">
+      <path
+        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.84-2.06 3.79-2.06C21.3 8.58 22 10.9 22 14.02V21h-4v-6.18c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.25V21h-4V9Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" role="img" className="h-4 w-4">
+      <path
+        d="M13.5 8.5V6.9c0-.76.5-.9.86-.9h2.13V2.5h-2.93C10.48 2.5 9 4.4 9 7.1v1.4H6.5v3.6H9V21h4.5v-8.9h2.68l.4-3.6H13.5Z"
+        fill="currentColor"
+      />
+    </svg>
   );
 }
