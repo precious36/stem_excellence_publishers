@@ -18,6 +18,21 @@ const faqs = [
     answer:
       "Yes. We support both experienced and first-time authors, especially when technical content is strong and the educational purpose is clear.",
   },
+  {
+    question: "Can institutions order books in bulk for students?",
+    answer:
+      "Yes. We support bulk orders for schools, colleges, NGOs, and STEM programmes, including coordinated distribution planning.",
+  },
+  {
+    question: "Do you provide school or institutional partnership packages?",
+    answer:
+      "Yes. We offer partnership support for schools, colleges, and programmes, including bulk planning and education-focused distribution pathways.",
+  },
+  {
+    question: "How much does each Chemistry For Malawi book cost?",
+    answer:
+      "Each title is priced at K20,000, and we can discuss support options for sponsored educational distribution partnerships.",
+  },
 ];
 
 const partnershipAreas = [
