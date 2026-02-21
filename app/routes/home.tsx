@@ -4,6 +4,8 @@ import { HomeHeroSection } from "../components/home/home-hero-section";
 import { HomeHighlightsSection } from "../components/home/home-highlights-section";
 import { HomeFocusPillarsSection } from "../components/home/home-focus-pillars-section";
 import { HomePublishStepsSection } from "../components/home/home-publish-steps-section";
+import { HomeSalesGrowthSection } from "../components/home/home-sales-growth-section";
+import { HomeSuccessStoriesSection } from "../components/home/home-success-stories-section";
 import { SiteLayout } from "../components/site/site-layout";
 import type { Route } from "./+types/home";
 
@@ -26,6 +28,8 @@ export default function Home() {
       <HomeHighlightsSection />
       <HomeFocusPillarsSection />
       <HomeFeaturedBooksSection />
+      <HomeSalesGrowthSection />
+      <HomeSuccessStoriesSection />
       <HomePublishStepsSection />
     </SiteLayout>
   );
