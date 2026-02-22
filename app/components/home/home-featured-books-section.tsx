@@ -7,24 +7,28 @@ const featuredBooks = [
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 1",
     image: "/red front.jpg",
+    author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 2",
     image: "/blue front.jpg",
+    author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 3",
     image: "/dark blue front.jpg",
+    author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
   },
   {
     title: "Chemistry For Malawi",
     subtitle: "Student's Book 4",
     image: "/brown front.jpg",
+    author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
   },
 ];
@@ -51,6 +55,7 @@ export function HomeFeaturedBooksSection() {
               </div>
               <p className="home-book-subtitle">{book.subtitle}</p>
               <h3 className="home-book-title">{book.title}</h3>
+              <p><b>Authors:</b> {book.author}</p>
               <p className="home-book-price">Price: {book.price}</p>
             </article>
           ))}
