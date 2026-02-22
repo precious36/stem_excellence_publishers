@@ -17,6 +17,7 @@ const bookCatalogue = [
     volume: "Student's Book 1",
     frontImage: "/red front.jpg",
     backImage: "/red back.jpg",
+    author: "Blessings G. Malimusi & Trust P. Chifunga",
     isbn: "ISBN 978-99960-099-5-2",
     subject: "Chemistry",
     level: "Secondary School",
@@ -29,6 +30,7 @@ const bookCatalogue = [
     volume: "Student's Book 2",
     frontImage: "/blue front.jpg",
     backImage: "/blue back.jpg",
+    author: "Trust P. Chifunga & Blessings G. Malimusi",
     isbn: "ISBN 978-99960-099-6-9",
     subject: "Chemistry",
     level: "Secondary School",
@@ -41,6 +43,7 @@ const bookCatalogue = [
     volume: "Student's Book 3",
     frontImage: "/dark blue front.jpg",
     backImage: "/dark blue back.jpg",
+    author: "Blessings G. Malimusi & Trust P. Chifunga",
     isbn: "ISBN 978-99960-099-7-6",
     subject: "Chemistry",
     level: "Secondary School",
@@ -53,6 +56,7 @@ const bookCatalogue = [
     volume: "Student's Book 4",
     frontImage: "/brown front.jpg",
     backImage: "/brown back.jpg",
+    author: "Trust P. Chifunga & Blessings G. Malimusi",
     isbn: "ISBN 978-99960-082-4-5",
     subject: "Chemistry",
     level: "Secondary School",
@@ -88,6 +92,7 @@ export default function Books() {
         book.title,
         book.series,
         book.volume,
+        book.author,
         book.subject,
         book.level,
         book.format,
@@ -164,6 +169,7 @@ export default function Books() {
                       <figcaption></figcaption>
                     </figure>
                   </div>
+                  <p><b>Authors:</b> {book.author}</p>
                   <p className="book-price">Price: {formatKwacha(book.price)} </p>
                   <p className="modern-muted">{book.isbn}</p>
                 </article>
