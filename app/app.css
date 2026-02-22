@@ -156,6 +156,8 @@ svg {
 
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #c7d6e6;
   border-radius: 12px;
   background: #f8fbff;
@@ -163,6 +165,7 @@ svg {
   width: 2.8rem;
   height: 2.6rem;
   padding: 0;
+  line-height: 0;
   cursor: pointer;
 }
 
