@@ -42,7 +42,7 @@ const founders = [
     role: "Co-Founder",
     image: "/trust-p-chifunga.jpg",
     linkedin: "https://www.linkedin.com/in/trust-chifunga-2635bb163/",
-    facebook: "https://www.linkedin.com/in/trust-chifunga-2635bb163/",
+    facebook: "https://web.facebook.com/em.trust.5",
   },
 ];
 
