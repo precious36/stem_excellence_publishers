@@ -23,7 +23,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/0dvUgZea",
@@ -40,7 +40,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/04uudMAU",
@@ -57,7 +57,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/08sYkXAR",
@@ -74,7 +74,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "25 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/062tUX08",
@@ -189,7 +189,7 @@ export default function Books() {
                     </figure>
                   </div>
                   <p><b>Authors:</b> {book.author}</p>
-                  <p className="book-price">Price: {formatKwacha(book.price)} </p>
+                  <p className="book-price">Price: {formatKwacha(book.price)} (Locally in Malawi)</p>
                   <p className="modern-muted">Reading age: {book.readingAge}</p>
                   <p className="modern-muted">Language: {book.language}</p>
                   <p className="modern-muted">Publish date: {book.publishDate}</p>
