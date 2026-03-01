@@ -9,6 +9,7 @@ const featuredBooks = [
     image: "/red front.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
+    amazonUrl: "https://amzn.eu/d/0dvUgZea",
   },
   {
     title: "Chemistry For Malawi",
@@ -16,6 +17,7 @@ const featuredBooks = [
     image: "/blue front.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
+    amazonUrl: "https://amzn.eu/d/04uudMAU",
   },
   {
     title: "Chemistry For Malawi",
@@ -23,6 +25,7 @@ const featuredBooks = [
     image: "/dark blue front.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
+    amazonUrl: "https://amzn.eu/d/08sYkXAR",
   },
   {
     title: "Chemistry For Malawi",
@@ -30,6 +33,7 @@ const featuredBooks = [
     image: "/brown front.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
+    amazonUrl: "https://amzn.eu/d/062tUX08",
   },
 ];
 
@@ -57,6 +61,14 @@ export function HomeFeaturedBooksSection() {
               <h3 className="home-book-title">{book.title}</h3>
               <p><b>Authors:</b> {book.author}</p>
               <p className="home-book-price">Price: {book.price}</p>
+              <a
+                className="home-book-amazon-link"
+                href={book.amazonUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy on Amazon
+              </a>
             </article>
           ))}
         </div>
