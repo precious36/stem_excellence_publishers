@@ -15,8 +15,8 @@ const bookCatalogue = [
     title: "Chemistry For Malawi",
     series: "Chemistry For Malawi Series",
     volume: "Student's Book 1",
-    frontImage: "/red front.jpg",
-    backImage: "/red back.jpg",
+    frontImage: "/firstfront.jpg",
+    backImage: "/fristback.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     isbn: "ISBN-13 979-8249839710",
     subject: "Chemistry",
@@ -32,8 +32,8 @@ const bookCatalogue = [
     title: "Chemistry For Malawi",
     series: "Chemistry For Malawi Series",
     volume: "Student's Book 2",
-    frontImage: "/blue front.jpg",
-    backImage: "/blue back.jpg",
+    frontImage: "/secondfront.jpg",
+    backImage: "/secondback.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     isbn: "ISBN-13 979-8249821296",
     subject: "Chemistry",
@@ -49,8 +49,8 @@ const bookCatalogue = [
     title: "Chemistry For Malawi",
     series: "Chemistry For Malawi Series",
     volume: "Student's Book 3",
-    frontImage: "/dark blue front.jpg",
-    backImage: "/dark blue back.jpg",
+    frontImage: "/thirdfront.jpg",
+    backImage: "/thirdback.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     isbn: "ISBN-13 979-8249842291",
     subject: "Chemistry",
@@ -66,8 +66,8 @@ const bookCatalogue = [
     title: "Chemistry For Malawi",
     series: "Chemistry For Malawi Series",
     volume: "Student's Book 4",
-    frontImage: "/brown front.jpg",
-    backImage: "/brown back.jpg",
+    frontImage: "/fourthfront.jpg",
+    backImage: "/fourthback.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     isbn: "ISBN-13 979-8249848620",
     subject: "Chemistry",
@@ -192,7 +192,7 @@ export default function Books() {
                   <p className="book-price">Price: {formatKwacha(book.price)} (Locally in Malawi)</p>
                   <p className="modern-muted">Reading age: {book.readingAge}</p>
                   <p className="modern-muted">Language: {book.language}</p>
-                  <p className="modern-muted">Publish date: {book.publishDate}</p>
+                  <p className="modern-muted">Publication date: {book.publishDate}</p>
                   <p className="modern-muted">{book.isbn}</p>
                   <a
                     className="book-amazon-link"
