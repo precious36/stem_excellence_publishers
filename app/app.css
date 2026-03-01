@@ -707,6 +707,37 @@ svg {
   font-weight: 900;
 }
 
+.home-book-amazon-link,
+.book-amazon-link {
+  margin-top: 0.52rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c9dced;
+  border-radius: 999px;
+  background: #eef5ff;
+  color: #1c4f80;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0.45rem 0.78rem;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.home-book-amazon-link:hover,
+.book-amazon-link:hover {
+  transform: translateY(-1px);
+  background: #e4eefb;
+  color: #123f71;
+}
+
+.home-book-amazon-link:focus-visible,
+.book-amazon-link:focus-visible {
+  outline: 2px solid #8db1d8;
+  outline-offset: 2px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .home-book-card:hover {
     z-index: 8;
