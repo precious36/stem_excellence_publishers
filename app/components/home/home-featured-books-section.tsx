@@ -9,6 +9,10 @@ const featuredBooks = [
     image: "/red front.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
+    isbn: "ISBN 978-99960-099-5-2",
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/0dvUgZea",
   },
   {
@@ -17,6 +21,10 @@ const featuredBooks = [
     image: "/blue front.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
+    isbn: "ISBN 978-99960-099-6-9",
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/04uudMAU",
   },
   {
@@ -25,6 +33,10 @@ const featuredBooks = [
     image: "/dark blue front.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
+    isbn: "ISBN 978-99960-099-7-6",
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/08sYkXAR",
   },
   {
@@ -33,6 +45,10 @@ const featuredBooks = [
     image: "/brown front.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
+    isbn: "ISBN 978-99960-082-4-5",
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "25 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/062tUX08",
   },
 ];
@@ -61,6 +77,10 @@ export function HomeFeaturedBooksSection() {
               <h3 className="home-book-title">{book.title}</h3>
               <p><b>Authors:</b> {book.author}</p>
               <p className="home-book-price">Price: {book.price}</p>
+              <p className="home-book-meta">Reading age: {book.readingAge}</p>
+              <p className="home-book-meta">Language: {book.language}</p>
+              <p className="home-book-meta">Publish date: {book.publishDate}</p>
+              <p className="home-book-meta">{book.isbn}</p>
               <a
                 className="home-book-amazon-link"
                 href={book.amazonUrl}
