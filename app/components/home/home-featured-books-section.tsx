@@ -79,7 +79,7 @@ export function HomeFeaturedBooksSection() {
               <p className="home-book-price">Price: {book.price}</p>
               <p className="home-book-meta">Reading age: {book.readingAge}</p>
               <p className="home-book-meta">Language: {book.language}</p>
-              <p className="home-book-meta">Publish date: {book.publishDate}</p>
+              <p className="home-book-meta">Publication date: {book.publishDate}</p>
               <p className="home-book-meta">{book.isbn}</p>
               <a
                 className="home-book-amazon-link"
