@@ -18,11 +18,14 @@ const bookCatalogue = [
     frontImage: "/red front.jpg",
     backImage: "/red back.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
-    isbn: "ISBN 978-99960-099-5-2",
+    isbn: "ISBN-13 979-8249839710",
     subject: "Chemistry",
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/0dvUgZea",
   },
   {
@@ -32,11 +35,14 @@ const bookCatalogue = [
     frontImage: "/blue front.jpg",
     backImage: "/blue back.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
-    isbn: "ISBN 978-99960-099-6-9",
+    isbn: "ISBN-13 979-8249821296",
     subject: "Chemistry",
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/04uudMAU",
   },
   {
@@ -46,11 +52,14 @@ const bookCatalogue = [
     frontImage: "/dark blue front.jpg",
     backImage: "/dark blue back.jpg",
     author: "Blessings G. Malimusi & Trust P. Chifunga",
-    isbn: "ISBN 978-99960-099-7-6",
+    isbn: "ISBN-13 979-8249842291",
     subject: "Chemistry",
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/08sYkXAR",
   },
   {
@@ -60,11 +69,14 @@ const bookCatalogue = [
     frontImage: "/brown front.jpg",
     backImage: "/brown back.jpg",
     author: "Trust P. Chifunga & Blessings G. Malimusi",
-    isbn: "ISBN 978-99960-082-4-5",
+    isbn: "ISBN-13 979-8249848620",
     subject: "Chemistry",
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    readingAge: "12-8",
+    language: "English",
+    publishDate: "25 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/062tUX08",
   },
 ];
@@ -100,6 +112,9 @@ export default function Books() {
         book.subject,
         book.level,
         book.format,
+        book.readingAge,
+        book.language,
+        book.publishDate,
         book.isbn,
         formatKwacha(book.price),
         `${book.price}`,
@@ -175,6 +190,10 @@ export default function Books() {
                   </div>
                   <p><b>Authors:</b> {book.author}</p>
                   <p className="book-price">Price: {formatKwacha(book.price)} </p>
+                  <p className="modern-muted">Reading age: {book.readingAge}</p>
+                  <p className="modern-muted">Language: {book.language}</p>
+                  <p className="modern-muted">Publish date: {book.publishDate}</p>
+                  <p className="modern-muted">{book.isbn}</p>
                   <a
                     className="book-amazon-link"
                     href={book.amazonUrl}
@@ -183,7 +202,6 @@ export default function Books() {
                   >
                     Buy on Amazon
                   </a>
-                  <p className="modern-muted">{book.isbn}</p>
                 </article>
               ))
             ) : (
