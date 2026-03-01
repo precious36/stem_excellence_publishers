@@ -23,6 +23,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    amazonUrl: "https://amzn.eu/d/0dvUgZea",
   },
   {
     title: "Chemistry For Malawi",
@@ -36,6 +37,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    amazonUrl: "https://amzn.eu/d/04uudMAU",
   },
   {
     title: "Chemistry For Malawi",
@@ -49,6 +51,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    amazonUrl: "https://amzn.eu/d/08sYkXAR",
   },
   {
     title: "Chemistry For Malawi",
@@ -62,6 +65,7 @@ const bookCatalogue = [
     level: "Secondary School",
     format: "Print",
     price: BOOK_PRICE_KWACHA,
+    amazonUrl: "https://amzn.eu/d/062tUX08",
   },
 ];
 
@@ -171,6 +175,14 @@ export default function Books() {
                   </div>
                   <p><b>Authors:</b> {book.author}</p>
                   <p className="book-price">Price: {formatKwacha(book.price)} </p>
+                  <a
+                    className="book-amazon-link"
+                    href={book.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Buy on Amazon
+                  </a>
                   <p className="modern-muted">{book.isbn}</p>
                 </article>
               ))
