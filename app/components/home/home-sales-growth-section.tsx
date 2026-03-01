@@ -67,7 +67,7 @@ export function HomeSalesGrowthSection() {
             <h2 id="sales-growth-title">Books sales so far</h2>
             <div className="home-sales-milestone" aria-live="polite">
               <strong>{displaySales}+</strong>
-              <span>Books sold</span>
+              <span>Books sold locally in Malawi</span>
             </div>
           </div>
         </div>
