@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const FEATURED_BOOK_PRICE = "K20,0000";
+const FEATURED_BOOK_PRICE = "K20,0000 (Locally in Malawi)";
 
 const featuredBooks = [
   {
@@ -10,7 +10,7 @@ const featuredBooks = [
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
     isbn: "ISBN 978-99960-099-5-2",
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/0dvUgZea",
@@ -22,7 +22,7 @@ const featuredBooks = [
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
     isbn: "ISBN 978-99960-099-6-9",
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/04uudMAU",
@@ -34,7 +34,7 @@ const featuredBooks = [
     author: "Blessings G. Malimusi & Trust P. Chifunga",
     price: FEATURED_BOOK_PRICE,
     isbn: "ISBN 978-99960-099-7-6",
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "26 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/08sYkXAR",
@@ -46,7 +46,7 @@ const featuredBooks = [
     author: "Trust P. Chifunga & Blessings G. Malimusi",
     price: FEATURED_BOOK_PRICE,
     isbn: "ISBN 978-99960-082-4-5",
-    readingAge: "12-8",
+    readingAge: "12-18+",
     language: "English",
     publishDate: "25 Feb. 2026",
     amazonUrl: "https://amzn.eu/d/062tUX08",
