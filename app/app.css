@@ -707,6 +707,14 @@ svg {
   font-weight: 900;
 }
 
+.home-book-meta {
+  margin-top: 0.26rem;
+  color: #4d6885;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 .home-book-amazon-link,
 .book-amazon-link {
   margin-top: 0.52rem;
