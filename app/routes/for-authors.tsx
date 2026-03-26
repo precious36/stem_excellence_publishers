@@ -103,7 +103,7 @@ export default function ForAuthors() {
             <p>
               Send your manuscript package to{" "}
               <a href="mailto:submissions@stemexcellencepublishers.com">
-                submissions@stemexcellencepublishers.com
+               stemexcellencepublishersmw@gmail.com
               </a>
               .
             </p>

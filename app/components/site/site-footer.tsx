@@ -33,7 +33,7 @@ export function SiteFooter({ mode = "full", compactLinks = [] }: SiteFooterProps
             <p className="site-small-text">
               Email:{" "}
               <a href="mailto:info@stemexcellencepublishers.com">
-                info@stemexcellencepublishers.com
+                stemexcellencepublishersmw@gmail.com
               </a>
             </p>
             <p className="site-small-text">Copyright {year} STEM Excellence Publishers</p>
