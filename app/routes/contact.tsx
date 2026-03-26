@@ -28,13 +28,13 @@ export default function Contact() {
             <p>
               General enquiries:{" "}
               <a href="mailto:info@stemexcellencepublishers.com">
-                info@stemexcellencepublishers.com
+               stemexcellencepublishersmw@gmail.com
               </a>
             </p>
             <p>
               Manuscript submissions:{" "}
               <a href="mailto:submissions@stemexcellencepublishers.com">
-                submissions@stemexcellencepublishers.com
+                stemexcellencepublishersmw@gmail.com
               </a>
             </p>
             <ul className="modern-list">
@@ -48,7 +48,7 @@ export default function Contact() {
             <h2>Send a Message</h2>
             <form
               className="modern-form"
-              action="mailto:info@stemexcellencepublishers.com"
+              action="mailto:stemexcellencepublishersmw@gmail.com"
               method="post"
               encType="text/plain"
             >
