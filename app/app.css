@@ -16,7 +16,7 @@
   --brand-red: #c61f37;
   --brand-red-deep: #951426;
   --header-offset: 5.9rem;
-  --shadow: 0 8px 20px rgba(15, 32, 55, 0.12);
+  --shadow: none;
   --radius: 16px;
   --maxw: 1140px;
 }
@@ -50,9 +50,6 @@ a {
 
 button {
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    filter 180ms ease,
     background-color 180ms ease,
     border-color 180ms ease,
     color 180ms ease;
@@ -351,7 +348,7 @@ svg {
 
 .home-hero .ref-btn-primary,
 .home-hero .ref-btn-secondary {
-  box-shadow: 0 12px 22px rgba(8, 27, 45, 0.28);
+  box-shadow: none;
 }
 
 .home-hero .ref-btn-ghost {
@@ -456,12 +453,12 @@ svg {
   padding: 0.72rem 1.15rem;
   border-radius: 1.25rem;
   border: 0;
-  background: linear-gradient(180deg, var(--brand-red) 0%, var(--brand-red-deep) 100%);
+  background: var(--brand-red);
   color: #ffffff;
   font-size: clamp(1.9rem, 2.4vw, 2.5rem);
   line-height: 1.05;
   font-weight: 700;
-  box-shadow: 0 10px 18px rgba(149, 20, 38, 0.28);
+  box-shadow: none;
 }
 
 .focus-pillar-card h3 {
@@ -540,26 +537,25 @@ svg {
   font-weight: 800;
   padding: 0.72rem 1.7rem;
   cursor: pointer;
-  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .ref-btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.03);
+  border-color: #b8cce1;
 }
 
 .ref-btn-primary {
-  background: linear-gradient(180deg, var(--brand-red) 0%, var(--brand-red-deep) 100%);
-  border: 0;
+  background: var(--brand-red);
+  border: 1px solid var(--brand-red-deep);
   color: #ffffff;
-  box-shadow: 0 8px 18px rgba(10, 24, 40, 0.28);
+  box-shadow: none;
 }
 
 .ref-btn-secondary {
-  background: linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
-  border: 0;
+  background: var(--brand-blue);
+  border: 1px solid var(--brand-blue-deep);
   color: #ffffff;
-  box-shadow: 0 8px 18px rgba(10, 24, 40, 0.28);
+  box-shadow: none;
 }
 
 .ref-btn-ghost {
@@ -569,7 +565,7 @@ svg {
 }
 
 .home-focus-strip {
-  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+  background: #ffffff;
   border-top: 1px solid #d2dce8;
   border-bottom: 1px solid #d2dce8;
 }
@@ -730,13 +726,13 @@ svg {
   line-height: 1;
   text-decoration: none;
   padding: 0.45rem 0.78rem;
-  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .home-book-amazon-link:hover,
 .book-amazon-link:hover {
-  transform: translateY(-1px);
   background: #e4eefb;
+  border-color: #b5cce5;
   color: #123f71;
 }
 
@@ -792,11 +788,11 @@ svg {
   margin-top: 0.68rem;
   border: 1px solid #d5e3f2;
   border-radius: 0.9rem;
-  background: linear-gradient(145deg, #0d4a92 0%, #be1c34 130%);
+  background: #0d4a92;
   padding: 0.92rem 1.05rem;
   min-width: 10rem;
   text-align: center;
-  box-shadow: 0 12px 24px rgba(9, 31, 55, 0.15);
+  box-shadow: none;
 }
 
 .home-sales-milestone strong {
@@ -824,7 +820,7 @@ svg {
 }
 
 .home-success-stories {
-  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+  background: #ffffff;
   border-bottom: 1px solid #dde6f1;
   padding: 1.35rem 0 1.45rem;
 }
@@ -899,7 +895,7 @@ svg {
   border: 1px solid #d2dff0;
   border-radius: 1rem;
   background: #ffffff;
-  box-shadow: 0 12px 24px rgba(11, 32, 54, 0.08);
+  box-shadow: none;
   padding: 1rem 1.05rem;
   display: grid;
   grid-template-columns: 1.65fr 1fr;
@@ -939,8 +935,8 @@ svg {
 .home-story-quote-box {
   border: 1px solid #d5e3f2;
   border-radius: 0.9rem;
-  background: linear-gradient(145deg, #0d4a92 0%, #be1c34 130%);
-  box-shadow: 0 14px 26px rgba(8, 27, 45, 0.2);
+  background: #0d4a92;
+  box-shadow: none;
   padding: 0.95rem 0.92rem;
 }
 
@@ -991,8 +987,8 @@ svg {
   .nav-toggle:hover,
   .home-stories-arrow:hover,
   .home-stories-dot:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.04);
+    transform: none;
+    filter: none;
   }
 
   .home-stories-dot:hover {
@@ -1083,7 +1079,7 @@ svg {
 
 .home-founder-card-text {
   padding: 0.95rem 0.9rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1105,10 +1101,8 @@ svg {
   margin: 0.6rem;
   border-radius: 0.2rem;
   padding: 1.45rem 1rem;
-  background:
-    linear-gradient(130deg, rgba(13, 69, 138, 0.97) 8%, rgba(198, 31, 55, 0.97) 120%),
-    radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.16), transparent 45%);
-  box-shadow: var(--shadow);
+  background: #0d4a92;
+  box-shadow: none;
   color: #ffffff;
 }
 
@@ -1177,7 +1171,7 @@ svg {
   height: 44px;
   border-radius: 16px;
   border: 1px solid #bfd4e7;
-  background: linear-gradient(135deg, rgba(198, 31, 55, 0.11), rgba(14, 79, 153, 0.16));
+  background: #eef4fb;
   display: grid;
   place-items: center;
   margin-bottom: 10px;
@@ -1298,12 +1292,9 @@ svg {
   padding: 1.55rem 1.45rem;
   border-radius: 1.35rem;
   border: 1px solid #d4e0ee;
-  background:
-    radial-gradient(circle at 92% 12%, rgba(198, 31, 55, 0.16), transparent 42%),
-    radial-gradient(circle at 8% 86%, rgba(15, 79, 137, 0.17), transparent 40%),
-    linear-gradient(180deg, #ffffff 0%, #f5f9fe 100%);
+  background: #ffffff;
   overflow: hidden;
-  box-shadow: 0 14px 30px rgba(11, 30, 54, 0.08);
+  box-shadow: none;
 }
 
 .modern-page .page-head h1 {
@@ -1351,9 +1342,9 @@ svg {
 .modern-stat-card {
   border: 1px solid #d7e4f2;
   border-radius: 1rem;
-  background: linear-gradient(170deg, #ffffff, #f4f9ff);
+  background: #ffffff;
   padding: 1rem 1.1rem;
-  box-shadow: 0 10px 24px rgba(14, 36, 58, 0.07);
+  box-shadow: none;
 }
 
 .modern-stat-value {
@@ -1386,8 +1377,8 @@ svg {
 .modern-card {
   border: 1px solid #d7e4f2;
   border-radius: 1.1rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-  box-shadow: 0 14px 28px rgba(11, 32, 54, 0.08);
+  background: #ffffff;
+  box-shadow: none;
   padding: 1.05rem 1.1rem;
 }
 
@@ -1463,7 +1454,7 @@ svg {
   border: 1px solid #d7e4f2;
   border-radius: 1rem;
   background: #ffffff;
-  box-shadow: 0 10px 22px rgba(11, 32, 54, 0.06);
+  box-shadow: none;
   padding: 0.9rem 1rem;
 }
 
@@ -1608,9 +1599,9 @@ svg {
 
 .modern-card-accent {
   border: 0;
-  background: linear-gradient(145deg, #0d4a92 0%, #be1c34 130%);
+  background: #0d4a92;
   color: #ffffff;
-  box-shadow: 0 16px 30px rgba(8, 27, 45, 0.24);
+  box-shadow: none;
 }
 
 .modern-card-accent h2,
@@ -1688,20 +1679,19 @@ svg {
   width: fit-content;
   border: 0;
   border-radius: 0.78rem;
-  background: linear-gradient(180deg, #1161b0 0%, #0d3f82 100%);
+  background: #0d4f99;
   color: #ffffff;
   font-family: "Montserrat", "Trebuchet MS", sans-serif;
   font-size: 0.95rem;
   font-weight: 800;
   padding: 0.65rem 1.1rem;
   cursor: pointer;
-  box-shadow: 0 10px 18px rgba(13, 37, 64, 0.24);
-  transition: transform 150ms ease, filter 150ms ease;
+  box-shadow: none;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 
 .modern-submit:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.03);
+  background: #0b427f;
 }
 
 .modern-footnote {
@@ -1782,7 +1772,7 @@ svg {
 .site-footer {
   border-top: 1px solid #0a3267;
   margin-top: 26px;
-  background: linear-gradient(180deg, #0e4f99 0%, #0a3670 100%);
+  background: #0e4f99;
   padding: 22px 0 34px;
 }
 
