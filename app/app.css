@@ -1803,6 +1803,26 @@ svg {
   font-size: 0.86rem;
 }
 
+.site-footer-links.compact {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.site-footer-bottom {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.site-footer-bottom .site-small-text {
+  margin-top: 4px;
+}
+
+.site-footer-bottom .site-small-text:first-child {
+  margin-top: 0;
+}
+
 .site-footer a {
   color: #ffffff;
 }
